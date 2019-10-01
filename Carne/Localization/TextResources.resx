@@ -165,6 +165,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>Dashboard</value>
   </data>
+  <data name="ImageDisplay" xml:space="preserve">
+    <value>ImageDisplay</value>
+  </data>
   <data name="Device" xml:space="preserve">
     <value>Device</value>
   </data>

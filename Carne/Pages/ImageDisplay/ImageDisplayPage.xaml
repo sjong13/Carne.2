@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<base:ImageDisplayPageXaml
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:Carne.Pages"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Class="Carne.Pages.ImageDisplayPage">
+
+    <RelativeLayout
+        VerticalOptions="Fill">
+
+        <ScrollView
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}">
+
+            <StackLayout
+                Spacing="0"
+                VerticalOptions="Fill"
+                BackgroundColor="Red">
+                <!--<ffimageloading:CachedImage 
+                    DownsampleToViewSize="True"
+                    Source="https://www.seriouseats.com/images/2015/04/Anova-Steak-Guide-Sous-Vide-Photos15-beauty.jpg"/>-->
+                <Image
+                    Aspect="AspectFill"
+                    VerticalOptions="FillAndExpand"
+                    Source="https://www.seriouseats.com/images/2015/04/Anova-Steak-Guide-Sous-Vide-Photos15-beauty.jpg"/>
+            </StackLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</base:ImageDisplayPageXaml>    

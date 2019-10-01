@@ -22,7 +22,7 @@
 	-->
     <!-- Theme Colors -->
     <Color
-        x:Key="AccentColor">#FFDA125F</Color>
+        x:Key="AccentColor">#FFFF0000</Color>
     <Color
         x:Key="BaseTextColor">#D6E1F1</Color>
     <Color

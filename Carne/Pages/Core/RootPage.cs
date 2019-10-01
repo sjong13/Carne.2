@@ -22,8 +22,8 @@ namespace Carne.Pages
         #region // Constructor(s)
         public RootPage()
         {
-            _defaultPageType = typeof(DashboardPage);
-            _defaultPageViewModelType = typeof(DashboardViewModel);
+            _defaultPageType = typeof(ImageDisplayPage);
+            _defaultPageViewModelType = typeof(ImageDisplayPageViewModel);
             Pages = new Dictionary<Type, NavigationPage>();
             Master = new MenuPage(this, _defaultPageType);
 

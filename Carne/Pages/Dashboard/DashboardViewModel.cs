@@ -1,4 +1,9 @@
-﻿namespace Carne.ViewModels
+﻿using Carne.Pages;
+using System;
+using System.Timers;
+using Xamarin.Forms;
+
+namespace Carne.ViewModels
 {
     public class DashboardViewModel : BaseViewModel
     {
@@ -11,9 +16,12 @@
         {
             Title = "Dashboard";
         }
+
+
         #endregion
 
-        #region // Methods        
+        #region // Methods  
+
         #endregion
     }
 }

@@ -9,7 +9,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label
-                Text="Dashboard Page"
+                Text="There's nothing to see here. Go back to the meat page."
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

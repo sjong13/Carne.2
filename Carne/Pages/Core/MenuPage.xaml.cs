@@ -50,7 +50,9 @@ namespace Carne.Pages
             _items = new List<NavigationItem>
             {
                 new NavigationItem {Category = TextResources.MenuCategory1Name, MenuTitle = TextResources.Dashboard, PageType = typeof(DashboardPage), ViewModelType = typeof(DashboardViewModel), Icon = FontAwesomeFont.ThLarge },
+                new NavigationItem {Category = TextResources.MenuCategory1Name, MenuTitle = TextResources.ImageDisplay, PageType = typeof(ImageDisplayPage), ViewModelType = typeof(ImageDisplayPageViewModel), Icon = FontAwesomeFont.Ambulance}          
             };
+            
 
             // add menu items outside of the constructor (just another example)
             _items.Add(new NavigationItem { Category = TextResources.AppManagement, MenuTitle = TextResources.About, PageType = typeof(AboutPage), ViewModelType = typeof(AboutViewModel), Icon = FontAwesomeFont.Question });

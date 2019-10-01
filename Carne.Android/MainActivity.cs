@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Content;
 using Android.Util;
 using Carne.Android.Helpers;
+using FFImageLoading.Forms.Platform;
 
 namespace Carne.Android
 {

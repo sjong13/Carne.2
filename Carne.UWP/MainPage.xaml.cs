@@ -20,7 +20,7 @@ namespace Carne.UWP
         public MainPage()
         {
             this.InitializeComponent();
-
+            
             LoadApplication(new Carne.App());
         }
     }
