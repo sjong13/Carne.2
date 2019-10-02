@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <ProjectGuid>{4aec863a-21a1-41fb-bf66-c937458436b3}</ProjectGuid>
@@ -14,6 +14,7 @@
     <PackageReference Include="Plugin.Controls.FLoatingLabelEntry" Version="1.0.0" />
     <PackageReference Include="Plugin.Controls.GestureFrame" Version="1.0.0" />
     <PackageReference Include="Plugin.Controls.Shared" Version="1.0.0" />
+    <PackageReference Include="ServiceStack.Client" Version="5.7.0" />
     <PackageReference Include="SkiaSharp" Version="1.68.0" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />

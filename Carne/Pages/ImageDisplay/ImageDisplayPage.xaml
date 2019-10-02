@@ -17,15 +17,14 @@
 
             <StackLayout
                 Spacing="0"
-                VerticalOptions="Fill"
-                BackgroundColor="Red">
+                VerticalOptions="Fill">
                 <!--<ffimageloading:CachedImage 
                     DownsampleToViewSize="True"
                     Source="https://www.seriouseats.com/images/2015/04/Anova-Steak-Guide-Sous-Vide-Photos15-beauty.jpg"/>-->
                 <Image
                     Aspect="AspectFill"
                     VerticalOptions="FillAndExpand"
-                    Source="https://www.seriouseats.com/images/2015/04/Anova-Steak-Guide-Sous-Vide-Photos15-beauty.jpg"/>
+                    Source="{Binding MeatURI}"/>
             </StackLayout>
 
         </ScrollView>
