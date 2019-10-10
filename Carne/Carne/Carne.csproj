@@ -21,7 +21,7 @@
     <PackageReference Include="ReactiveUI.Fody" Version="9.19.5" />
     <PackageReference Include="ServiceStack.Client" Version="5.7.0" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.709238" />
     <PackageReference Include="Xamo.Framework.Core" Version="1.0.1" />
   </ItemGroup>
 
@@ -49,6 +49,9 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Dashboard\DashboardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\DetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Settings\Templates\ThemeItemTemplate.xaml">

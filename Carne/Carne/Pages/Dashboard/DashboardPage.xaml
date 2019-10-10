@@ -1,19 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<base:DashboardPageXaml
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:base="clr-namespace:Carne.Pages"
-    x:Class="Carne.Pages.DashboardPage"
-    Title="{Binding Title}">
+<base:DashboardPageXaml xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:base="clr-namespace:Carne.Pages"
+                        x:Class="Carne.Pages.DashboardPage"
+                        Title="{Binding Title}">
 
     <ContentPage.Content>
-        <StackLayout>
-            <Image
-                VerticalOptions="Fill"
-                Aspect="AspectFill"
-                Source="{Binding CurrentMeat.URI}"
-                ></Image>
-        </StackLayout>
+        <Grid>
+            <StackLayout x:Name="ImageView"
+                         Opacity="1">
+
+                <Image x:Name="MainImage"
+                       VerticalOptions="FillAndExpand"
+                       Aspect="AspectFill"
+                       Source="{Binding CurrentImageSource}">
+                    <Image.GestureRecognizers>
+                        <SwipeGestureRecognizer Direction="Up"
+                                                Swiped="OnSwipeUp" />
+                        <SwipeGestureRecognizer Direction="Down"
+                                                Swiped="OnSwipeDown" />
+                        <SwipeGestureRecognizer Direction="Left"
+                                                Swiped="OnSwipeLeft" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </StackLayout>
+            <StackLayout x:Name="DetailView"
+                         Opacity="0">
+                <Label>Details</Label>
+            </StackLayout>
+        </Grid>
+        
     </ContentPage.Content>
 
 </base:DashboardPageXaml>

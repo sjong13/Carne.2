@@ -32,11 +32,11 @@ namespace Carne.Pages
             MasterBehavior = MasterBehavior.Popover;
 
             // disabled swipe if set to false
-            if (Device.RuntimePlatform == Device.Android)
-            {
-                IsGestureEnabled = true;
-            }
-            else
+            //if (Device.RuntimePlatform == Device.Android)
+            //{
+            //    IsGestureEnabled = true;
+            //}
+            //else
             {
                 IsGestureEnabled = false;
             }

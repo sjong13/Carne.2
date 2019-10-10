@@ -1,4 +1,7 @@
-﻿using Carne.ViewModels;
+﻿using System;
+using System.Diagnostics;
+using Carne.ViewModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Carne.Pages
@@ -9,13 +12,54 @@ namespace Carne.Pages
         public DashboardPage()
         {
             InitializeComponent();
+            KeyPressed += DashboardPage_KeyPressed;
+        }
+
+        private void DashboardPage_KeyPressed(object sender, KeyEventArgs e)
+        {
+            switch(e.Key)
+            {
+                case "Down":
+                    ViewModel.MoveNext();
+                    break;
+                case "Up":
+                    ViewModel.MovePrevious();
+                    break;
+                case "Right":
+                    ViewModel.ShowDetails();
+                    break;
+            }
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            if(!ViewModel.IsInitialized)
+            {
+                await ViewModel.Init();
+            }
+            else
+            {
+                Debug.WriteLine("uh oh. frag detected.");
+            }
             
         }
 
-        protected override void OnAppearing()
+        private void OnSwipeUp(object sender, Xamarin.Forms.SwipedEventArgs e)
         {
-            base.OnAppearing();
-            ViewModel.Init();
+            ViewModel.MoveNext();
+        }
+
+        private async void OnSwipeLeft(object sender, Xamarin.Forms.SwipedEventArgs e)
+        {
+            ImageView.FadeTo(0);
+            await DetailView.FadeTo(1);
+            //ViewModel.ShowDetails();
+        }
+
+        private void OnSwipeDown(object sender, SwipedEventArgs e)
+        {
+            ViewModel.MovePrevious();
         }
     }
 

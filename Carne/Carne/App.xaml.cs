@@ -68,7 +68,7 @@ namespace Carne
                 if (Device.RuntimePlatform == Device.UWP)
                 {
                     tbItem.Text = "Close";
-                    tbItem.Icon = "Assets/cancel.png";
+                    tbItem.IconImageSource = "Assets/cancel.png";
                 }
 
                 NavigationPage navPage = new NavigationPage(page);

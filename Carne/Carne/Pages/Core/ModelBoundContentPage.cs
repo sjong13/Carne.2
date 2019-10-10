@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace Carne.Pages
 {
-    public abstract class ModelBoundContentPage<TViewModel> : ContentPage where TViewModel : BaseViewModel
+    public abstract class ModelBoundContentPage<TViewModel> : CustomPage where TViewModel : BaseViewModel
     {
         /// <summary>
         /// Gets the generically typed ViewModel from the underlying BindingContext.
