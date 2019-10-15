@@ -7,27 +7,35 @@
 
     <ContentPage.Content>
         <Grid>
+            <Grid.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Up"
+                                        Swiped="OnSwipeUp" />
+                <SwipeGestureRecognizer Direction="Down"
+                                        Swiped="OnSwipeDown" />
+                <SwipeGestureRecognizer Direction="Left"
+                                        Swiped="OnSwipeLeft" />
+                <SwipeGestureRecognizer Direction="Right"
+                                        Swiped="OnSwipeRight" />
+            </Grid.GestureRecognizers>
             <StackLayout x:Name="ImageView"
-                         Opacity="1">
+                         IsVisible="True">
 
                 <Image x:Name="MainImage"
                        VerticalOptions="FillAndExpand"
                        Aspect="AspectFill"
                        Source="{Binding CurrentImageSource}">
-                    <Image.GestureRecognizers>
-                        <SwipeGestureRecognizer Direction="Up"
-                                                Swiped="OnSwipeUp" />
-                        <SwipeGestureRecognizer Direction="Down"
-                                                Swiped="OnSwipeDown" />
-                        <SwipeGestureRecognizer Direction="Left"
-                                                Swiped="OnSwipeLeft" />
-                    </Image.GestureRecognizers>
                 </Image>
 
             </StackLayout>
             <StackLayout x:Name="DetailView"
-                         Opacity="0">
-                <Label>Details</Label>
+                         IsVisible="False"
+                         >
+                <Label Text="{Binding CurrentMeat.Name}"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                <Label Text="{Binding CurrentRestaurant.Name}"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
             </StackLayout>
         </Grid>
         

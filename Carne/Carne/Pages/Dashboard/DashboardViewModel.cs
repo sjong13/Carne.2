@@ -27,16 +27,26 @@ namespace Carne.ViewModels
             set { currentIndex = value;
                 CurrentMeat = BufferedMeatList[currentIndex];
                 CurrentImageSource = BufferedImageSources[currentIndex];
+                CurrentRestaurant = RestaurantList.Where(x => x.Id.Equals(CurrentMeat.RestaurantId)).FirstOrDefault();
             }
         }
 
         
 
         [Reactive] public Meat CurrentMeat { get; set; }
+        [Reactive] public Restaurant CurrentRestaurant { get; set; }
         public List<Meat> BufferedMeatList { get; set; }
+        
+
+        internal void HideDetails()
+        {
+            throw new NotImplementedException();
+        }
+
         [Reactive] public ImageSource CurrentImageSource { get; set; }
         public List<ImageSource> BufferedImageSources { get; set; }
         public List<Meat> MeatList { get; set; }
+        public List<Restaurant> RestaurantList { get; set; }
         private int bufferSize = 5;
 
         #endregion
@@ -63,7 +73,13 @@ namespace Carne.ViewModels
             {
                 BufferedImageSources.Add(ImageHelper.GetImageSourceFromUrl(item.URI));
             }
+
+            string response2 = await jsonClient.GetAsync<string>("api/restaurants");
+            RestaurantList = JsonConvert.DeserializeObject<List<Restaurant>>(response2);
+
             CurrentIndex = 0;
+
+            
 
             IsInitialized = true;
         }
@@ -89,11 +105,6 @@ namespace Carne.ViewModels
             {
                 CurrentIndex--;
             }
-        }
-
-        public async void ShowDetails()
-        {
-            await Navigation.PushModalAsync(new DetailPage());
         }
 
         #endregion
