@@ -17,8 +17,10 @@ namespace Carne.Web.Models
     
         public CarneWebContext() : base("name=CarneWebContext")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<CarneWebContext, Migrations.Configuration>());
         }
 
         public System.Data.Entity.DbSet<Carne.Web.Models.Meat> Meats { get; set; }
+        public System.Data.Entity.DbSet<Carne.Web.Models.Restaurant> Restaurants { get; set; }
     }
 }
