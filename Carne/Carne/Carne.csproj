@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Plugin.Controls.GestureFrame" Version="1.0.0" />
     <PackageReference Include="Plugin.Controls.Shared" Version="1.0.0" />
     <PackageReference Include="ReactiveUI.Fody" Version="9.19.5" />
